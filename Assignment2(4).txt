@@ -1,0 +1,6 @@
+TF-IDF (term frequency-inverse document frequency) is a statistical measure that evaluates how relevant a word is to a document in a collection of documents.
+This is done by multiplying two metrics: how many times a word appears in a document, and the inverse document frequency of the word across a set of documents.
+The term frequency of a word in a document. There are several ways of calculating this frequency, with the simplest being a raw count of instances a word appears in a document. Then, there are ways to adjust the frequency, by length of a document, or by the raw frequency of the most frequent word in a document.
+TF(t) = (Number of times term t appears in a document) / (Total number of terms in the document).
+The inverse document frequency of the word across a set of documents. This means, how common or rare a word is in the entire document set. The closer it is to 0, the more common a word is. This metric can be calculated by taking the total number of documents, dividing it by the number of documents that contain a word, and calculating the logarithm.
+IDF(t) = log_e(Total number of documents / Number of documents with term t in it).

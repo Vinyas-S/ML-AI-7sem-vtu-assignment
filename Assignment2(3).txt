@@ -1,0 +1,36 @@
+The bag-of-words model is a way of representing text data when modeling text with machine learning algorithms.
+The approach is very simple and flexible, and can be used in a myriad of ways for extracting features from documents.
+A bag-of-words is a representation of text that describes the occurrence of words within a document. It involves two things:
+
+1)A vocabulary of known words.
+2)A measure of the presence of known words.
+
+Let’s take an example to understand this concept in depth.
+
+“It was the best of times”
+“It was the worst of times”
+“It was the age of wisdom”
+“It was the age of foolishness”
+
+We treat each sentence as a separate document and we make a list of all words from all the four documents excluding the punctuation. We get,
+
+‘It’, ‘was’, ‘the’, ‘best’, ‘of’, ‘times’, ‘worst’, ‘age’, ‘wisdom’, ‘foolishness’
+
+The next step is the create vectors. Vectors convert text that can be used by the machine learning algorithm.
+
+We take the first document — “It was the best of times” and we check the frequency of words from the 10 unique words.
+“it” = 1
+“was” = 1
+“the” = 1
+“best” = 1
+“of” = 1
+“times” = 1
+“worst” = 0
+“age” = 0
+“wisdom” = 0
+“foolishness” = 0
+Rest of the documents will be:
+“It was the best of times” = [1, 1, 1, 1, 1, 1, 0, 0, 0, 0]
+“It was the worst of times” = [1, 1, 1, 0, 1, 1, 1, 0, 0, 0]
+“It was the age of wisdom” = [1, 1, 1, 0, 1, 0, 0, 1, 1, 0]
+“It was the age of foolishness” = [1, 1, 1, 0, 1, 0, 0, 1, 0, 1]
